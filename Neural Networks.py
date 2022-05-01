@@ -65,8 +65,14 @@ plt.scatter(x1_neg, x2_neg, marker='x', c='red', s=200, linewidths=2)
 print("3.2.A: The shape of the decision boundary for a single unit is a line")
 
 # Problem 3.2.B:
-
 print("3.2.B: 4 points laying in the decision boundary of the first unit are: ", [x_values1, y_values1])
 
+# Problem 3.2.C:
+x_vals = np.array([[0.5, 0, -3], [0.5, 2, 0.5]])
+z4 = w1.T @ x_vals + w0_1
+f1z4 = np.maximum(z4, 0)
+print("3.2.C: The outputs of the hidden units f1(z1) for the given inputs are:  ", f1z4.tolist())
+
+# Problem 3.3 Network outputs: Answered directly in online course.
 plt.grid()
 plt.show()
